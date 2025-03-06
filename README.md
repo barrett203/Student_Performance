@@ -77,4 +77,25 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 ![Scores](https://github.com/barrett203/Student_Performance/blob/main/Test%20scores.png "Scores")
 * The average student scored 66.1/100 on their math test, 69.2 on their reading test and 68.1 on their writing test.
 
+3)Standard deviation, variance and range of test scores 
+```
+SELECT 
+    STDDEV(math_score) AS stddev_math, 
+    VARIANCE(math_score) AS variance_math,
+    MAX(math_score) - MIN(math_score) AS range_math,
+
+    STDDEV(reading_score) AS stddev_reading, 
+    VARIANCE(reading_score) AS variance_reading,
+    MAX(reading_score) - MIN(reading_score) AS range_reading,
+
+    STDDEV(writing_score) AS stddev_writing, 
+    VARIANCE(writing_score) AS variance_writing,
+    MAX(writing_score) - MIN(writing_score) AS range_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+```
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/Measures%20of%20dispersion%20.png "Spread")
+
+
+
+
 
