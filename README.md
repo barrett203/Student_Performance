@@ -150,6 +150,17 @@ GROUP BY test_preparation;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_TestPreparation.png "Spread")
 
+9)Effect of gender and ethnicity on test scores:
+```
+SELECT gender, ethnicity,
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY gender, ethnicity;
+```
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/Variables%201.png "Spread")
+
 
 
 
