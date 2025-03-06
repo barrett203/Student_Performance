@@ -24,3 +24,31 @@ Excel will be used to load the data and initially look for any issues. SQL will 
 ## Transform and Explore 
 All SQL code can be found [here](https://github.com/barrett203/Student_Performance/blob/main/SQL_Code).
 
+1) Create a Project ID on Big Query
+2) Create a dataset and table, naming everything appropriately
+3) Check for missing values
+```
+SELECT 
+    COUNT(*) - COUNT(gender) AS missing_gender,
+    COUNT(*) - COUNT(ethnicity) AS missing_ethnicity,
+    COUNT(*) - COUNT(parental_education) AS missing_parent_edu,
+    COUNT(*) - COUNT(lunch) AS missing_lunch,
+    COUNT(*) - COUNT(test_preparation) AS missing_test_prep,
+    COUNT(*) - COUNT(math_score) AS missing_math,
+    COUNT(*) - COUNT(reading_score) AS missing_reading,
+    COUNT(*) - COUNT(writing_score) AS missing_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+```
+4) Check for duplicates
+```
+SELECT *, COUNT(*) AS duplicate_count
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY gender, ethnicity, parental_education, lunch, 
+         test_preparation, math_score, reading_score, writing_score
+HAVING COUNT(*) > 1;
+```
+# Analyze 
+
+## Select summary statistics and visualizations 
+
+
