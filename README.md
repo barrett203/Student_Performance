@@ -14,4 +14,4 @@
 
 ### Data source: 
 
-Student Exam Performance Data available on [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/code?datasetId=74977&sortBy=voteCount). The data contains survey responses from 1,000 students. This dataset contains input related to gender, ethnicity, parental level of education, whether the student is entitled to a free/reduced cost school lunch, exam preparation and math, reading and writing test scores. 
+Student Exam Performance Data available on [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/code?datasetId=74977&sortBy=voteCount). The data contains survey responses from 1,000 students. This dataset contains input related to gender, ethnicity, parental level of education, whether the student is entitled to a free/reduced cost school lunch, exam preparation and math, reading and writing test scores. The data dictionary can be found [here]().
