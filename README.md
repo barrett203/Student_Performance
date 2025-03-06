@@ -137,7 +137,19 @@ SELECT lunch,
 FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY lunch;
 ```
-![Spread]( "Spread")
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_Lunch.png "Spread")
+
+8)Effect of test preparation
+```
+SELECT test_preparation,
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY test_preparation;
+```
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_TestPreparation.png "Spread")
+
 
 
 
