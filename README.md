@@ -51,4 +51,29 @@ HAVING COUNT(*) > 1;
 
 ## Select summary statistics and visualizations 
 
+1)Showcase the count of each unique variable that may impact student test performance 
+```
+SELECT gender AS category, COUNT(*) AS count FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY gender
+UNION ALL
+SELECT ethnicity AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY ethnicity
+UNION ALL
+SELECT parental_education AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY parental_education
+UNION ALL
+SELECT lunch AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY lunch
+UNION ALL
+SELECT test_preparation AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY test_preparation;
+```
+
+2)Showcase average test scores
+
+```
+SELECT
+    MIN(math_score) AS min_math, MAX(math_score) AS max_math, AVG(math_score) AS avg_math,
+    MIN(reading_score) AS min_reading, MAX(reading_score) AS max_reading, AVG(reading_score) AS avg_reading,
+    MIN(writing_score) AS min_writing, MAX(writing_score) AS max_writing, AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+```
+![Scores](https://github.com/barrett203/Student_Performance/blob/main/Test%20scores.png "Scores")
+* The average student scored 66.1/100 on their math test, 69.2 on their reading test and 68.1 on their writing test.
+
 
