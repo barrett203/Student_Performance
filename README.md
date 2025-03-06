@@ -63,6 +63,7 @@ SELECT lunch AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance
 UNION ALL
 SELECT test_preparation AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY test_preparation;
 ```
+![Summary](https://github.com/barrett203/Student_Performance/blob/main/Descriptive%20statistics%20.png "Summary")
 
 2)Showcase average test scores
 
