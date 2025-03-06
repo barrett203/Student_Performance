@@ -161,6 +161,15 @@ GROUP BY gender, ethnicity;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/Variables%201.png "Spread")
 
-
+10)Effect of parental education, lunch entitlement and test preparation:
+```
+SELECT test_preparation, lunch, parental_education,
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY test_preparation, lunch, parental_education;
+```
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/Variables%202.png "Spread")
 
 
