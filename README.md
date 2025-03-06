@@ -95,7 +95,48 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/Measures%20of%20dispersion%20.png "Spread")
 
-
-
-
-
+4)Effect of gender on test scores:
+```
+SELECT gender, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY gender;
+```
+5)Effect of ethnicity on test scores:
+```
+SELECT ethnicity, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY ethnicity;
+```
+6)Effect of parental education level 
+```
+SELECT parental_education, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY parental_education;
+```
+7)Effect of lunch entitlement:
+```
+SELECT lunch, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY lunch;
+```
+8)Effect of test preparation:
+```
+SELECT test_preparation, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY test_preparation;
+```
