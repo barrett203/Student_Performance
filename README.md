@@ -95,25 +95,49 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/Measures%20of%20dispersion%20.png "Spread")
 
-4)Effect of gender and ethnicity on test scores:
+4)Effect of gender:
 ```
-SELECT gender, ethnicity,
+SELECT gender,
        AVG(math_score) AS avg_math, 
        AVG(reading_score) AS avg_reading, 
        AVG(writing_score) AS avg_writing
 FROM `studentsystem-452900.StudentPerformance.Students`
-GROUP BY gender, ethnicity;
+GROUP BY gender;
 ```
-![Variables](https://github.com/barrett203/Student_Performance/blob/main/Variables%201.png "Variables")
-![Graph](https://github.com/barrett203/Student_Performance/blob/main/Variables%201%20graph.png "Graph")
-5)Effect of parental education, lunch entitlement and test preparation:
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_Gender%20.png "Spread")
+
+5)Effect of ethnicity:
 ```
-SELECT test_preparation, lunch, parental_education,
+SELECT ethnicity,
        AVG(math_score) AS avg_math, 
        AVG(reading_score) AS avg_reading, 
        AVG(writing_score) AS avg_writing
 FROM `studentsystem-452900.StudentPerformance.Students`
-GROUP BY test_preparation, lunch, parental_education;
+GROUP BY ethnicity;
 ```
-![Variables](https://github.com/barrett203/Student_Performance/blob/main/Variables%202.png "Variables")
-![Graph](https://github.com/barrett203/Student_Performance/blob/main/Variables%202%20graph.png "Graph")
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy-Ethnicity.png "Spread")
+
+6)Effect of parental education level
+```
+SELECT parental_education,
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY parental_education;
+```
+![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_ParentalEducation.png "Spread")
+
+7)Effect of lunch entitlement
+```
+SELECT lunch,
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY lunch;
+```
+![Spread]( "Spread")
+
+
+
