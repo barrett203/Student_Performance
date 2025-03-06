@@ -24,9 +24,9 @@ Excel will be used to load the data and initially look for any issues. SQL will 
 ## Transform and Explore 
 All SQL code can be found [here](https://github.com/barrett203/Student_Performance/blob/main/SQL_Code).
 
-1) Create a Project ID on Big Query
-2) Create a dataset and table, naming everything appropriately
-3) Check for missing values
+1) Create a Project ID on Big Query:
+2) Create a dataset and table, naming everything appropriately:
+3) Check for missing values:
 ```
 SELECT 
     COUNT(*) - COUNT(gender) AS missing_gender,
@@ -39,7 +39,7 @@ SELECT
     COUNT(*) - COUNT(writing_score) AS missing_writing
 FROM `studentsystem-452900.StudentPerformance.Students`
 ```
-4) Check for duplicates
+4) Check for duplicates:
 ```
 SELECT *, COUNT(*) AS duplicate_count
 FROM `studentsystem-452900.StudentPerformance.Students`
@@ -51,7 +51,7 @@ HAVING COUNT(*) > 1;
 
 ## Select summary statistics and visualizations 
 
-1)Showcase the count of each unique variable that may impact student test performance 
+1)Showcase the count of each unique variable that may impact student test performance:
 ```
 SELECT gender AS category, COUNT(*) AS count FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY gender
 UNION ALL
@@ -65,7 +65,7 @@ SELECT test_preparation AS category, COUNT(*) FROM `studentsystem-452900.Student
 ```
 ![Summary](https://github.com/barrett203/Student_Performance/blob/main/Descriptive%20statistics%20.png "Summary")
 
-2)Showcase average test scores
+2)Showcase average test scores:
 
 ```
 SELECT
@@ -77,7 +77,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 ![Scores](https://github.com/barrett203/Student_Performance/blob/main/Test%20scores.png "Scores")
 * The average student scored 66.1/100 on their math test, 69.2 on their reading test and 68.1 on their writing test.
 
-3)Standard deviation, variance and range of test scores 
+3)Standard deviation, variance and range of test scores:
 ```
 SELECT 
     STDDEV(math_score) AS stddev_math, 
@@ -117,7 +117,7 @@ GROUP BY ethnicity;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy-Ethnicity.png "Spread")
 
-6)Effect of parental education level
+6)Effect of parental education level:
 ```
 SELECT parental_education,
        AVG(math_score) AS avg_math, 
@@ -128,7 +128,7 @@ GROUP BY parental_education;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_ParentalEducation.png "Spread")
 
-7)Effect of lunch entitlement
+7)Effect of lunch entitlement:
 ```
 SELECT lunch,
        AVG(math_score) AS avg_math, 
@@ -139,7 +139,7 @@ GROUP BY lunch;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_Lunch.png "Spread")
 
-8)Effect of test preparation
+8)Effect of test preparation:
 ```
 SELECT test_preparation,
        AVG(math_score) AS avg_math, 
