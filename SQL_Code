@@ -1,0 +1,54 @@
+#Missing values:
+
+SELECT 
+    COUNT(*) - COUNT(gender) AS missing_gender,
+    COUNT(*) - COUNT(ethnicity) AS missing_ethnicity,
+    COUNT(*) - COUNT(parental_education) AS missing_parent_edu,
+    COUNT(*) - COUNT(lunch) AS missing_lunch,
+    COUNT(*) - COUNT(test_preparation) AS missing_test_prep,
+    COUNT(*) - COUNT(math_score) AS missing_math,
+    COUNT(*) - COUNT(reading_score) AS missing_reading,
+    COUNT(*) - COUNT(writing_score) AS missing_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+
+#Checking for duplicates:
+
+SELECT *, COUNT(*) AS duplicate_count
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY gender, ethnicity, parental_education, lunch, 
+         test_preparation, math_score, reading_score, writing_score
+HAVING COUNT(*) > 1;
+
+#Descriptive statistics:
+
+SELECT
+    MIN(math_score) AS min_math, MAX(math_score) AS max_math, AVG(math_score) AS avg_math,
+    MIN(reading_score) AS min_reading, MAX(reading_score) AS max_reading, AVG(reading_score) AS avg_reading,
+    MIN(writing_score) AS min_writing, MAX(writing_score) AS max_writing, AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+
+#Group by gender:
+
+SELECT gender, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY gender;
+
+#Effect of test preparation of test scores:
+
+SELECT test_preparation, 
+       AVG(math_score) AS avg_math, 
+       AVG(reading_score) AS avg_reading, 
+       AVG(writing_score) AS avg_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
+GROUP BY test_preparation;
+
+#Variance and standard deviation:
+
+SELECT 
+    STDDEV(math_score) AS stddev_math, VARIANCE(math_score) AS variance_math,
+    STDDEV(reading_score) AS stddev_reading, VARIANCE(reading_score) AS variance_reading,
+    STDDEV(writing_score) AS stddev_writing, VARIANCE(writing_score) AS variance_writing
+FROM `studentsystem-452900.StudentPerformance.Students`
