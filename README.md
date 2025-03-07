@@ -95,6 +95,9 @@ SELECT
 FROM `studentsystem-452900.StudentPerformance.Students`
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/Measures%20of%20dispersion%20.png "Spread")
+* Math and Writing test scores have similar standard deviations and variances, indicating a similar spread of scores.
+* Reading has the lowest standard deviation and variance, suggesting that students reading scores are more consistent than Math and Writing test scores.
+* The range for Math is the highest, meaning it has the widest spread between the highest and lowest test scores.
 
 4)Effect of gender:
 ```
