@@ -185,4 +185,11 @@ GROUP BY test_preparation, lunch, parental_education;
 
 ![Graph](https://github.com/barrett203/Student_Performance/blob/main/Variables%202%20graph.png "Graph")
 
+## Act
+The results of the data analysis showcases that there are a variety of improvements that can be implemented by the educators to support students' test performance:
+* Gender: Adjust teaching methods based on learning preferences (e.g., collaborative vs. competitive approaches). Encourage STEM participation if gender disparities are observed.
+* Ethnicity: Provide culturally responsive teaching and inclusive curriculum materials. Offer language support programs if needed. Encourage mentorship programs with role models from similar backgrounds.
+* Parental education level: Offer parent workshops to equip them with strategies to support learning at home. Implement after-school tutoring for students who may lack parental academic guidance. Provide homework help sessions or online resources for additional learning.
+* Free lunch eligibility: Offer free tutoring, mentorship, and additional study resources. Ensure students have access to technology (laptops, internet) for remote learning. Provide breakfast programs to support focus and cognitive function.
+* Test preparation: Make test prep programs more accessible (e.g., mandatory in-person classroom sessions, online modules). Provide incentives for completing test prep (e.g., extra credit, recognition). Use adaptive learning tools to personalize test preparation based on individual needs.
 
