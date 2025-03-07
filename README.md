@@ -16,7 +16,7 @@
 
 Student Exam Performance Data available on [Kaggle](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/code?datasetId=74977&sortBy=voteCount). The data contains survey responses from 1,000 students. This dataset contains input related to gender, ethnicity, parental level of education, whether the student is entitled to a free/reduced cost school lunch, exam preparation and math, reading and writing test scores. The data dictionary can be found [here](https://github.com/barrett203/Student_Performance/blob/main/Data%20dictionary%20.png).
 
-# Process
+## Process
 
 ## Applications
 Excel will be used to load the data and initially look for any issues. SQL will then be used to transform and explore the data. Finally, Tableau will be used to construct data visualisations. 
@@ -47,7 +47,7 @@ GROUP BY gender, ethnicity, parental_education, lunch,
          test_preparation, math_score, reading_score, writing_score
 HAVING COUNT(*) > 1;
 ```
-# Analyze 
+## Analyze 
 
 ## Select summary statistics and visualizations 
 
