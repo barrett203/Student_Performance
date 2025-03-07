@@ -64,6 +64,7 @@ UNION ALL
 SELECT test_preparation AS category, COUNT(*) FROM `studentsystem-452900.StudentPerformance.Students` GROUP BY test_preparation;
 ```
 ![Summary](https://github.com/barrett203/Student_Performance/blob/main/Descriptive%20statistics%20.png "Summary")
+* Students of other white backgrounds were the most represented by the data. Parents were most like likely to have obtaind some college qualifications or achieved an associate's degree. In addition, students were not likely to have completed some test preparation and were more frequently charged the standard fee for their school lunches. 
 
 2)Showcase average test scores:
 
@@ -105,6 +106,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY gender;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_Gender%20.png "Spread")
+* On average female students scored higher on their reading and writing tests, whereas male students scored higher on their maths tests. 
 
 5)Effect of ethnicity:
 ```
@@ -116,6 +118,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY ethnicity;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy-Ethnicity.png "Spread")
+* On average Mixed White and Black Americans scored the highest on their tests, across all of Maths, Reading and Writing. 
 
 6)Effect of parental education level:
 ```
@@ -127,6 +130,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY parental_education;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_ParentalEducation.png "Spread")
+* On average students' parents who had obtained a Master's degree scored the highest on their tests, across all of Maths, Reading and Writing. 
 
 7)Effect of lunch entitlement:
 ```
@@ -138,6 +142,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY lunch;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_Lunch.png "Spread")
+* On average students who were charged the standard fee for their school lunches scored the highest of their tests, across all of Maths, Reading and Writing. 
 
 8)Effect of test preparation:
 ```
@@ -149,6 +154,7 @@ FROM `studentsystem-452900.StudentPerformance.Students`
 GROUP BY test_preparation;
 ```
 ![Spread](https://github.com/barrett203/Student_Performance/blob/main/GroupBy_TestPreparation.png "Spread")
+* On average students who took part in test preparation scored higher on their tests than those that did not, across all of Maths, Reading and Writing. 
 
 9)Effect of gender and ethnicity on test scores:
 ```
